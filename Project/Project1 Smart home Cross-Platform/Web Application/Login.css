@@ -1,0 +1,662 @@
+/*==================== GOOGLE FONTS ====================*/
+
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+ 
+  
+    /*========== Colors ==========*/
+  
+    /* HSL color mode */
+  
+    --bg-main-color-white: #ffffff;
+    --bg-main-color-gold: #F5B553;
+    --bg-submain-color-brown: #854836;
+    --bg-submain-color-black: #080808;
+    --bg-submain-color-gray: #191919;
+  
+    --body-color: #080808;
+    --text-white: #ffffff;
+    --text-gold: #F5B553;
+    --text-black: rgb(0, 0, 0);
+  
+    --icon-color-black: rgb(0, 0, 0);
+    --icon-color-white: rgb(255, 255, 255);
+  
+    --box-shadow-black: #000000;
+
+    --scroll-bar-color: #F5B553;
+    --scroll-barhover-color: #FFCCAD;
+    --scroll-thumb-color: #ffffff;
+
+    /*========== Font and typography ==========*/
+    --body-font: "Poppins", sans-serif;
+  
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+  
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.2rem;
+    --h3-font-size: 0.8rem;
+    --h4-font-size: 0.6rem;
+  
+    --font-menu: 1rem;
+    --normal-font-size: 0.5rem;
+    --small-font-size: 0.375rem;
+    --smallmedium-font-size: 0.313rem;
+    --smaller-font-size: 0.25rem;
+  
+    /*========== Font weight ==========*/
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+  
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+  
+    /*========== z index ==========*/
+    --z-basic: 10;
+    --z-immediate: 100;
+    --z-hard: 1000;
+    --z-heavy: 10000;
+  
+    --transition: all 400ms ease;
+    
+  }
+  
+  /*========== Variables Dark theme ==========*/
+  body.dark {
+    -icon-sun-moon-color: #ffc067;
+    --body-color: #231605;
+    --icon-color: #ffffff;
+    --bg-main-color-white: #231605;
+    --text-black: #ffffff;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  
+body {
+    
+    position: relative;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-image: url('assets/images/Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--text-menu-color);
+    overflow: hidden;
+    
+  }
+
+  h1 {
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+    font-size: var(--big-font-size);
+  }
+  
+  h2 {
+    color: var(--text-subtitle-color);
+    font-weight: var(--font-medium);
+    font-size: var(--h2-font-size);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .head{
+    font-size: 3rem;
+    font-weight: var(--font-bold);
+    text-align: center;
+  }
+  
+  .title {
+    color: var(--text-title-color);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+  }
+
+  /*========== SCROLL BAR ==========*/
+
+  ::-webkit-scrollbar {
+    width: 0.6rem;
+    background: var(--scroll-thumb-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    width: 0.6rem;
+    background: var(--scroll-bar-color);
+    border-radius: 0.5rem;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-barhover-color);
+  }
+  
+
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+
+/*==================== LAYOUT ====================*/
+
+  .section {
+    padding: 2rem 1.5rem;
+  }
+  .container {
+    max-width: 768px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+  
+  .grid {
+    display: grid;
+  }
+  
+  .logo {
+    max-width: 3rem;
+    position: relative;
+    left: 5rem;
+    cursor: pointer;
+  }
+  
+  /* Change background header */
+  .window-scroll {
+    background: var(--bg-main-color-white);
+    box-shadow: 0 2px 10px var(--box-shadow);
+    transition: var(--transition);
+    z-index: var(--z-menu);
+  }
+  
+  /* scrollup */
+  .fa-arrow-up {
+    position: relative;
+    right: -0.2rem;
+  }
+  .scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -3rem;
+    background: #001834;
+    backdrop-filter: blur(16px);
+    padding: 0.45rem;
+    border-radius: 0.5rem;
+    font-size: 1.15rem;
+    color: #ffffff;
+    transition: 0.4s;
+    width: 35px;
+    height: 40px;
+    z-index: var(--z-message);
+  }
+  
+  .scrollup:hover {
+    background: var(--bg-submain-color-orange);
+  }
+  
+  /* Show Scroll Up*/
+  
+  .show-scroll {
+    transition: var(--transition);
+    bottom: 3rem;
+  }
+ิิ
+  /* ====================== Login ======================*/
+
+.login_main{
+
+  display: flex;
+  align-content: center;
+  width: 500px;
+  height: 500px;
+  
+}
+
+.login_submain{
+  margin-top: 10rem;
+  margin-left: 15rem;
+  display: flex;
+  width: 1500px;
+  height: 700px;
+  border-radius: 50px;
+  background-color: var(--bg-submain-color-black);
+  box-shadow: 0 0 100px var(--bg-submain-color-gray);
+
+  
+  
+
+}
+.login_left{
+
+  width: 650px;
+
+}
+
+.login_bg{
+  position: relative;
+  align-content: left;
+  background-color: var(--bg-main-color-gold);
+  border-radius: 50px 0 0 50px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+}
+.login_bg img{
+
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  
+}
+.login_logo{
+
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+
+  
+}
+.login_logo img{
+
+  width: 70%;
+  height: 70%;
+}
+
+.login_right{
+
+
+  align-self: center;
+  padding: 2rem;
+  margin-left: 3rem;
+}
+
+.login_right h1{
+
+  font-weight: var(--font-semibold);
+  font-size: 3rem;
+  color: var(--text-gold);
+}
+
+.check{
+
+  width: 100%;
+ 
+}
+.login_right p{
+
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.25rem 0;
+  color: var(--text-gold);
+}
+
+
+.login_mainemail{
+
+  width: 700px;
+  height: 50px;
+  background-color: var(--bg-submain-color-gray);
+  border-radius: 10px;
+  display: flex;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.login_submainmail,.login_submainpass{
+
+  width: 650px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login_group{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--bg-submain-color-gray) inset !important; 
+    -webkit-text-fill-color: #fff !important; 
+}
+
+.login_email{
+
+  width: 500px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: var(--font-semibold);
+  outline: none;
+  border: none;
+  background: transparent;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  color: var(--text-white);
+}
+
+
+.user_iconuser,.user_iconpassword{
+  color: var(--text-white) !important;
+}
+.login_mainemail i{
+
+  font-size: 1.5rem;
+  color: rgb(21, 212, 0);
+ 
+}
+
+.correct_iconcheck{
+
+  color: var(--bg-main-color-gold) !important;
+
+}
+.incorrect_iconcheck {
+
+  color: rgb(255, 52, 52) !important;
+
+}
+
+
+.login_email::placeholder{
+
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.correct_iconcheck, .incorrect_iconcheck {
+  display: none;
+}
+
+.login_mainpass{
+
+  width: 700px;
+  height: 50px;
+  background-color: var(--bg-submain-color-gray);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.5rem 0;
+
+
+
+
+}
+
+
+.login_mainpass span{
+
+  font-size: 2rem;
+  margin: 0 1.5rem;
+ 
+}
+
+.login_pass{
+
+  width: 500px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: var(--font-semibold);
+  outline: none;
+  border: none;
+  background: transparent;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  color: var(--text-white);
+}
+
+.login_pass::placeholder{
+
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+.login_mainpass i{
+
+  font-size: 1.5rem;
+  color: rgb(21, 212, 0);
+ 
+}
+
+
+
+.login_add{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login_addcheck{
+
+  display: flex;
+  align-items: center;
+  font-weight: var(--font-bold);
+  font-size: 0.75rem;
+  margin: 0.5rem 0;
+
+}
+
+#checkbox{
+
+  background-color: #efefef;
+  
+}
+
+.login_addcheck p{
+
+  margin-left: 0.5rem;
+  
+}
+
+.login_add p{
+  font-size: 0.75rem;
+}
+
+.login_mainbutton{
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+
+}
+
+.login_buttonlog{
+
+  width: 250px;
+  height: 50px;
+  background: var(--bg-main-color-gold);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--bg-main-color-gold) 0px 0px 10px;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+
+
+}
+
+.login_buttonlog:hover{
+
+
+box-shadow: var(--box-shadow-orange) 0px 0px 15px;
+transition: var(--transition);
+}
+
+.login_buttonlog p{
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-black);
+  
+}
+
+.login_buttonregis{
+
+  width: 250px;
+  height: 50px;
+  background: var(--bg-main-color-white);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--bg-main-color-white) 0px 0px 10px;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+
+}
+
+.login_buttonregis:hover{
+
+
+box-shadow: var(--box-shadow-orange) 0px 0px 15px;
+transition: var(--transition);
+}
+
+.login_buttonregis p{
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-black);
+  
+}
+.user_mainhorizon{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+.login_change{
+
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--text-gold);
+}
+.user_horizon{
+
+  width: 300px;
+  height: 2px;
+  background: var(--bg-main-color-white);
+}
+
+.login_mainaddbutton{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.login_addbutton{
+
+  width: 150px;
+  height: 50px;
+  background: var(--bg-main-color-gold);
+  border-radius: 1rem;
+  box-shadow: var(--bg-main-color-gold) 0px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  
+}
+.login_addbutton:hover{
+
+box-shadow: var(--box-shadow-orange) 0px 0px 15px;
+transition: var(--transition);
+
+}
+
+.login_addbutton i{
+
+  font-size: 1rem;
+  color: var(--text-black);
+
+}
+
+.login_addbutton p{
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform:capitalize;
+  color: var(--text-black);
+}
+
+
+.Alertmessage{
+  position: relative;
+  width: 1000px;
+  height: 50px;
+  border-radius: 1rem;
+  background: rgb(255, 52, 52);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  align-items: center;
+  transition: opacity 500ms ease-in-out;
+}
+
+.Alertmessage-icon{
+
+  position: absolute;
+  right: 0;
+  color: var(--text-white);
+  font-size: 1rem;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.Alertmessage p{
+
+  color: var(--text-white);
+  font-size: 1rem;
+  font-weight: 600;
+}

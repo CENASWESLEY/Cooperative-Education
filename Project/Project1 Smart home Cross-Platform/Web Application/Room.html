@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard Smart Home</title>
+     <!--=============== FAVICON ===============-->
+     <link rel="shortcut icon" href="assets/Icons/Logo.png" type="image/x-icon">
+
+     <!--==================== fontawesome ====================-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />     
+     <!--==================== Font ====================-->
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   
+     <!--==================== CSS ====================-->
+     <link rel="stylesheet" href="Room.css">
+
+     <!--==================== Chart ====================-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+     <!--==================== Scrollreveal ====================-->
+     <script src="https://unpkg.com/scrollreveal"></script>
+
+     <!--==================== FileSaver ====================-->
+    
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+
+
+</head>
+<body>
+
+    <div class="layout">
+        <!--==================== header ====================-->
+        <section class="header_main">
+            <div class="header_iconmenu">
+
+                <div class="header_subiconmenu">
+
+                    <div class="header_logo">
+
+                        <a href="Smarthome.html" id="home">
+                            <div class="menu-item menu-itemlogo">
+                                <img src="assets/Icons/Logo.png" alt="Home Icon">
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="vertical-menu">    
+                        <a href="Room.html" id="room">
+                            <div class="menu-item">
+                                <img src="assets/Icons/manage.png" alt="room Icon">
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="header_user">
+                        <a href="User.html" id="user">
+                            <div class="menu-item menu-itemuser">
+                                <img src="assets/Icons/user.png" alt="Home Icon">
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--==================== Room ====================-->
+        
+        <div class="room_main">
+            <div class="room_submain">
+                <div class="room_title">
+                    <p></p>
+                    <p>Room</p>
+                    <img class="room_title_plus" id="room_title_plus" src="assets/Icons/plus.png" alt="">
+                </div>
+                <div class="room_mainbox" id="room_mainbox">
+
+                 <!--   
+                        <div class="room_box">
+                            <a href="Living_Room.html">
+                                <img class="room_box_bg" src="assets/images/Living.jpg" alt="">
+                            </a>
+                            <img class="room_box_option" id="room_box_option" src="assets/Icons/option.png" alt="">
+                            <div class="room_box_title">
+                                <p>Living Room</p>
+                                <p>3 Devices</p>
+                            </div>
+                        </div>
+                            
+                        <div class="room_box">
+                            <a href="Kitchen_Room.html">
+                                <img class="room_box_bg" src="assets/images/Kitchen.jpg" alt="">
+                            </a>
+                            <img class="room_box_option" id="room_box_option" src="assets/Icons/option.png" alt="">
+                            <div class="room_box_title">
+                                <p>Kitchen Room</p>
+                                <p>3 Devices</p>
+                            </div>
+                        </div>
+
+                        <div class="room_box">
+                            <a href="Bed_Room.html">
+                                <img class="room_box_bg" src="assets/images/Bed.png" alt="">
+                            </a>
+                            <img class="room_box_option" id="room_box_option" src="assets/Icons/option.png" alt="">
+                            <div class="room_box_title">
+                                <p>Bed Room</p>
+                                <p>3 Devices</p>
+                            </div>
+                        </div>
+
+                        <div class="room_box">
+                            <a href="Sensor.html">
+                                <img class="room_box_bg" src="assets/images/sensor.jpg" alt="">
+                            </a>
+                            <img class="room_box_option" id="room_box_option" src="assets/Icons/option.png" alt="">
+                            <div class="room_box_title">
+                                <p>Sensor</p>
+                                <p>3 Devices</p>
+                            </div>
+                        </div>
+
+                        <div class="room_box">
+                            <a href="Security.html">
+                                <img class="room_box_bg" src="assets/images/security.jpg" alt="">
+                            </a>
+                            <img class="room_box_option" id="room_box_option" src="assets/Icons/option.png" alt="">
+                            <div class="room_box_title">
+                                <p>Security</p>
+                                <p>3 Devices</p>
+                            </div>
+                        </div>
+                -->
+                </div>
+            </div>
+        </div>
+
+        <div id="dialog_add" class="dialog" style="display: none;">
+            <div class="dialog_content">
+                <div class="dialog_subcontent">
+                    <p>Add Room</p>
+                    <img class="close-button" id="close-button-Add" src="assets/Icons/close.png" alt=""> 
+                </div>
+
+                <div class="dialog_box dialog_box_add">
+                    <img class="dialog_box_bg  dialog_box_bg_add" id="dialog_box_bg_add" src="assets/images/Living.jpg" alt="Image Preview">
+                    
+                    <!--ใช้ input image ซึ่งสามารถ custom icon ได้-->
+                    <label class="dialog_box_option" for="imageUploadAdd" class="custom-file-upload">
+                        <div class="upload-icon"></div>
+                    </label>
+                    <input type="file" id="imageUploadAdd" accept="assets/images/*">
+
+                    <div class="dialog_box_title">
+                        <form action="">
+                            <input type="text" class="dialog_box_input" id="dialog_box_input_addname" placeholder="Input Your Room">
+                        </form>
+                        <form action="">
+                            <p><input type="number" class="dialog_box_input dialog_box_inputdevice" id="dialog_box_input_adddevice" placeholder="0"> Device</p>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="dialog_addprocess">
+                    <img src="assets/Icons/loader.svg" class="dialog_addprocess-loader" id="loader-icon"  alt="">
+                    <img src="assets/Icons/success.png" class="dialog_addprocess-success" id="success-icon" alt="">
+                    <p class="dialog_addprocess_number" id="dialog_addprocess_number">UPLOAD : 0%</p>
+                    
+                </div>
+                
+                <div class="dialog_submit" id="dialog_submit_Add">
+                    <input type="button" class="dialog_buttonsubmit" value="SUBMIT" onclick="">
+                </div>
+            </div>
+        </div>
+
+
+        <div id="dialog_edit" class="dialog" style="display: none;">
+            <div class="dialog_content">
+                <div class="dialog_subcontent">
+                    <p>Edit Widget Room</p>
+                    <img class="close-button" id="close-button-Edit" src="assets/Icons/close.png" alt=""> 
+                </div>
+
+                <div class="dialog_box dialog_box_edit">
+                    <img class="dialog_box_bg dialog_box_bg_edit" id="dialog_box_bg_edit" src="assets/images/Living.jpg" alt="Image Preview">
+                    
+                
+                    <label class="dialog_box_option" for="imageUploadEdit" class="custom-file-upload">
+                        <div class="upload-icon"></div>
+                    </label>
+                    <input type="file" id="imageUploadEdit" accept="assets/images/*">
+
+
+                    <div class="dialog_box_title">
+                        <form action="">
+                            <input type="text" class="dialog_box_input" id="dialog_box_input_editname" placeholder="Input Your Room">
+                        </form>
+                        <form action="">
+                            <p><input type="number" class="dialog_box_input dialog_box_inputdevice" id="dialog_box_input_editdevice" placeholder="0"> Device</p>
+                        </form>
+                    </div>
+                    
+                </div>
+                
+            
+                <div class="dialog_submit" id="dialog_submit_Edit">
+                    <input type="button" class="dialog_buttonsubmit" value="SUBMIT" onclick="">
+                </div>
+
+                <div class="dialog_delete" id="dialog_delete">
+                    <img class="dialog_buttondelete" src="assets/Icons/delete.png" alt="">
+                </div>
+
+            </div> 
+        </div>
+
+        
+
+</div>
+
+
+    <script type="module" src="Room.js"></script>
+    
+
+</body>
+</html>

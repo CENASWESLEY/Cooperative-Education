@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard Smart Home</title>
+    <link rel="shortcut icon" href="assets/Icons/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <main class="login_main">
+        <section class="login_submain">
+            <div class="login_left">
+                <div class="login_bg">
+                    <img src="assets/images/Background.png" alt="">
+                    <div class="login_logo">
+                        <img src="assets/Icons/Logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="login_right">
+                <h1>Welcome To Application <br> Smart Home
+                    <img src="assets/Icons/check.png" alt="">
+                </h1>
+                <p>Control your home with just a touch. Create the perfect smart home experience with us.</p>
+                <form action="">
+                    <div class="login_mainemail">
+                        <div class="login_submainmail">
+                            <div class="login_group">
+                                <i class="fa-solid fa-user user_iconuser"></i>
+                                <input class="login_email" type="text" id="login-email" placeholder="Username">
+                            </div>
+                            <i class="fa-solid fa-circle-check correct_iconcheck correct_iconcheck-email" id="correct_iconcheck-loginemail" ></i>
+                            <i class="fa-solid fa-circle-xmark incorrect_iconcheck incorrect_iconcheck-email" id="incorrect_iconcheck-loginemail" ></i>
+                        </div>
+                    </div>
+                </form>
+                <form action="">
+                    <div class="login_mainpass">
+                        <div class="login_submainpass">
+                            <div class="login_group">
+                                <i class="fa-solid fa-lock user_iconpassword"></i>
+                                <input class="login_pass" type="password" id="login-password" placeholder="Password">
+                            </div>
+                            <i class="fa-solid fa-circle-check correct_iconcheck correct_iconcheck-pass" id="correct_iconcheck-loginpass"  ></i>
+                            <i class="fa-solid fa-circle-xmark incorrect_iconcheck incorrect_iconcheck-pass" id="incorrect_iconcheck-loginpass" ></i>
+                        </div>
+                    </div>
+                </form>
+                <div class="login_add">
+                    <div class="login_addcheck">
+                        <input type="checkbox" id="checkbox">
+                        <p>Remember me</p>
+                    </div>
+                    <p>forgot password</p>
+                </div>
+                <div class="login_mainbutton">
+                    <button class="login_buttonlog" type="button" onclick="login()">
+                        <p>Login</p>
+                    </button>
+                    <a href="Register.html">
+                        <div class="login_buttonregis">
+                            <p>Register</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="user_mainhorizon">
+                    <h4 class="login_change">Social Media</h4>
+                </div>
+                <div class="login_mainaddbutton">
+                    <button class="login_addbutton" type="button"  onclick="loginWithGoogle()">
+                        <i class="fa-brands fa-google"></i>
+                        <p>Google</p>
+                    </button>
+                    <div class="login_addbutton">
+                        <i class="fa-brands fa-facebook fac"></i>
+                        <p>Facebook</p>
+                    </div>
+                    <div class="login_addbutton">
+                        <i class="fa-brands fa-apple "></i>
+                        <p>Apple</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="Alertmessage_main" id="Alertmessage_main">
+        <div class="Alertmessage Alertmessage_passnotmatch" id="Alertmessage_passnotmatch" style="display: none;">
+            <p></p>
+            <i class="fa-solid fa-xmark Alertmessage-icon" id="Alertmessage_close-icon" ></i>
+        </div>
+        <div class="Alertmessage Alertmessage_incorrect" id="Alertmessage_incorrect" style="display: none;">
+            <p></p>
+            <i class="fa-solid fa-xmark Alertmessage-icon" id="Alertmessage_close-icon"></i>
+        </div>
+    </div>
+    <script type="module" src="Login&Register.js"></script>
+</body>
+</html>

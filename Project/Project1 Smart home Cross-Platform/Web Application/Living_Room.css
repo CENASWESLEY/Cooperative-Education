@@ -1,0 +1,82 @@
+
+.layout{
+
+  display: grid;
+  grid-template-columns: 265px 1620px;
+  align-items: center;
+}
+
+
+/*==================== Living Room ====================*/
+
+.living {
+  position: relative;
+  overflow: hidden;
+  width: 920px;
+  height: 290px;
+  background: var(--bg-submain-color-gray);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg_living {
+
+  
+  width: 100%;
+  height: 100%;
+}
+
+.bg_living img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 2rem;
+  
+}
+
+.bg_living::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0) 30%);
+}
+
+.bg_details {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--overlay-gradient);
+  border-radius: 0 0 2rem 2rem;
+}
+
+.bg_details p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 5px 10px rgb(0, 0, 0)
+  ;
+}
+
+.setting_living {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.setting_living img {
+  
+  width: 2rem;
+  height: 2rem;
+}

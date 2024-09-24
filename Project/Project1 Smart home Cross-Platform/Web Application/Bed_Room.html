@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard Smart Home</title>
+     <!--=============== FAVICON ===============-->
+     <link rel="shortcut icon" href="assets/Icons/Logo.png" type="image/x-icon">
+
+     <!--==================== fontawesome ====================-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+     
+     <!--==================== Font ====================-->
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   
+     <!--==================== CSS ====================-->
+     <link rel="stylesheet" href="Bed_Room.css">
+     <link rel="stylesheet" href="Smarthome.css">
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+     <!--==================== Scrollreveal ====================-->
+     <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+<body>
+
+    <div class="layout">
+       <!--==================== header ====================-->
+
+       <section class="header_main">
+        <div class="header_iconmenu">
+
+            <div class="header_subiconmenu">
+
+                <div class="header_logo">
+
+                    <a href="Smarthome.html" id="home">
+                        <div class="menu-item menu-itemlogo">
+                            <img src="assets/Icons/Logo.png" alt="Home Icon">
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="vertical-menu">    
+                    <a href="Room.html" id="room">
+                        <div class="menu-item">
+                            <img src="assets/Icons/manage.png" alt="room Icon">
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="header_user">
+                    <a href="User.html" id="user">
+                        <div class="menu-item menu-itemuser">
+                            <img src="assets/Icons/user.png" alt="Home Icon">
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <!--==================== Title ====================-->
+
+        <section class="section_main-center">
+
+            <main class="Bed">
+
+                <div class="bg_Bed">
+                    <div class="setting_Bed">
+                        <img src="assets/Icons/option.png" alt="">
+                    </div>
+
+                    <div class="bg_details">
+                        <p>Bed Room</p>
+                        <p>3 Devices</p>
+                    </div>
+                    
+                    <img src="assets/images/Bed.png" alt="">
+                    
+                </div>
+            
+            </main>
+
+            <main class="favourite_main">
+                <div class="favourite_main-title">
+                    <p class="favourite_name">CONTROL</p>
+                    <P class="favourite_device">3 DEVICES</P>
+                </div>
+
+                <div class="favourite_maincard">
+
+                    <div class="favourite_card">
+                        <div class="favorite_card-top">
+                            <p class="favourite_card-Room" >Security</p>
+                            <p class="favourite_card-name" >DOOR</p>
+                        </div>
+                        <div class="favorite_card-center">
+                            <img src="assets/Icons/door.png" alt="">
+                        </div>
+                        <div class="favourite_status">
+                            <p class="favourite_status-text">LOCK</p>
+                            <div class="favourite_switch">
+                                <input type="checkbox" id="switch1" class="switch switch_door switch_door-value">
+                                <label for="switch1" class="switch-label"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="favourite_card">
+                        <div class="favorite_card-top">
+                            <p class="favourite_card-Room" >Living Room</p>
+                            <p class="favourite_card-name">LIGHT</p>
+                        </div>
+                        <div class="favorite_card-center">
+                            <img src="assets/Icons/lamp.png" alt="">
+                        </div>
+                        <div class="favourite_status">
+                            <p class="favourite_status-text">TURN</p>
+                            <div class="favourite_switch">
+                                <input type="checkbox" id="switch2" class="switch switch_light switch_light-value">
+                                <label for="switch2" class="switch-label"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="favourite_card">
+                        <div class="favorite_card-top">
+                            <p class="favourite_card-Room">Bed Room</p>
+                            <p class="favourite_card-name">POWER</p>
+                        </div>
+                        <div class="favorite_card-center">
+                            <img src="assets/Icons/power.png" alt="">
+                        </div>
+                        <div class="favourite_status">
+                            <p class="favourite_status-text">TURN</p>
+                            <div class="favourite_switch">
+                                <input type="checkbox" id="switch3" class="switch switch_power switch_power-value">
+                                <label for="switch3" class="switch-label"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <main class="alert_main">
+                <div class="alert_main-title">
+                    <p class="alert_name">ALERT</p>
+                    <P class="alert_device">3 DEVICES</P>
+                </div>
+                    <div class="alert_maincard">
+                            <div class="alert_card">
+                                <div class="alert_card-top">
+                                    <p class="alert_card-Room">Sensor</p>
+                                    <p class="alert_card-name">ULTRASONIC</p>
+                                </div>
+
+                                <div class="alert_card-center">
+                                    <div class="alert_progress-circle " id="ultrasonic">
+                                        <div class="progress-circle-inner">
+                                        <div class="progress-circle-half left"></div>
+                                        <div class="progress-circle-half right">
+                                            <div class="progress-circle-half inner"></div>
+                                        </div>
+                                        <div class="progress-circle-center">
+                                            <span class="progress-circle-text" id="ultrasonic-value">0%</span>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert_card-bottom">
+                                    <p>STATUS</p>
+                                    <img src="assets/Icons/blackcar.png" alt="">
+                                </div>
+
+                            </div>
+
+                        <div class="alert_card">
+                            <div class="alert_card-top">
+                                <p class="alert_card-Room">Sensor</p>
+                                <p class="alert_card-name">WATER LEVEL</p>
+                            </div>
+                            
+                            <div class="alert_card-center">
+                                <div class="alert_progress-circle" id="water-level">
+                                    <div class="progress-circle-inner">
+                                      <div class="progress-circle-half left"></div>
+                                      <div class="progress-circle-half right">
+                                        <div class="progress-circle-half inner"></div>
+                                      </div>
+                                      <div class="progress-circle-center">
+                                        <span class="progress-circle-text" id="water-level-value">0%</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+
+                            <div class="alert_card-bottom">
+                                <p>Level</p>
+                                <img src="assets/Icons/lowwater.png" alt="">
+                            </div>
+
+                        </div>
+
+                    <div class="alert_card">
+                        <div class="alert_card-top">
+                            <p class="alert_card-Room">Sensor</p>
+                            <p class="alert_card-name">PUMP</p>
+                        </div>
+
+                        <div class="alert_card-center">
+                            <div class="alert_progress-circle" id="pump">
+                                <div class="progress-circle-inner">
+                                  <div class="progress-circle-half left"></div>
+                                  <div class="progress-circle-half right">
+                                    <div class="progress-circle-half inner"></div>
+                                  </div>
+                                  <div class="progress-circle-center">
+                                    <span class="progress-circle-text" id="pump-value">0%</span>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="alert_card-bottom">
+                            <p>STATUS</p>
+                            <img src="assets/Icons/blackgauge.png" alt="">
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </main>
+
+    </Section>
+
+    <section class="external_main">
+
+        <div class="external_title">
+            <p class="external_name">EXTERNAL</p>
+            <P class="external_device">1 DEVICES</P>
+        </div>
+
+        <div class="external_submain">
+            <div class="external_head">
+                <div class="external_headtext">
+                    <p class="external_card-Room">Sensor</p>
+                    <p class="external_card-name">METER</p>
+                </div>
+                <div class="external_card-img">
+                    <img src="assets/Icons/meter.png" alt="">
+                </div>
+            </div>
+
+            <div class="external_maincard-detail">
+                <div class="external_card-detail">
+                    <p class="external_card-name">VOLTAGE</p>
+                    <p class="external_card-value" id="volt">0.00</p>
+                    <p class="external_card-unit">V</p>
+                </div>
+                <div class="external_card-detail">
+                    <p class="external_card-name">CURRENT</p>
+                    <p class="external_card-value" id="current">0.00</p>
+                    <p class="external_card-unit">A</p>
+                </div>
+                <div class="external_card-detail">
+                    <p class="external_card-name">ACTIVE POWER</p>
+                    <p class="external_card-value" id="active_power">0.00</p>
+                    <p class="external_card-unit">W</p>
+                </div>
+                <div class="external_card-detail">
+                    <p class="external_card-name">REACTIVE POWER</p>
+                    <p class="external_card-value" id="reactive_power">0.00</p>
+                    <p class="external_card-unit">VAR</p>
+                </div>
+                <div class="external_card-detail">
+                    <p class="external_card-name">POWER FACTOR</p>
+                    <p class="external_card-value" id="power_factor">0.00</p>
+                    <p class="external_card-unit" style="opacity: 0;">PF</p>
+                </div>
+                <div class="external_card-detail">
+                    <p class="external_card-name">FREQUENCY</p>
+                    <p class="external_card-value" id="frequency">0.00</p>
+                    <p class="external_card-unit">HZ</p>
+                </div>
+
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            
+        </div>
+
+    </section>
+    
+</div>
+
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Smarthome.js"></script>
+    
+
+</body>
+</html>

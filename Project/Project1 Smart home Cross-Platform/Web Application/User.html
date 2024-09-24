@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard Smart Home</title>
+     <!--=============== FAVICON ===============-->
+     <link rel="shortcut icon" href="assets/Icons/Logo.png" type="image/x-icon">
+
+     <!--==================== fontawesome ====================-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />     
+     <!--==================== Font ====================-->
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   
+     <!--==================== CSS ====================-->
+     <link rel="stylesheet" href="User.css">
+     <link rel="stylesheet" href="Smarthome.css">
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+     <!--==================== Scrollreveal ====================-->
+     <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+    <div class="layout">
+
+        <!--==================== header ====================-->
+
+        <section class="header_main">
+            <div class="header_iconmenu">
+
+                <div class="header_subiconmenu">
+
+                    <div class="header_logo">
+
+                        <a href="Smarthome.html" id="home">
+                            <div class="menu-item menu-itemlogo">
+                                <img src="assets/Icons/Logo.png" alt="Home Icon">
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="vertical-menu">    
+                        <a href="Room.html" id="room">
+                            <div class="menu-item">
+                                <img src="assets/Icons/manage.png" alt="room Icon">
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="header_user">
+                        <a href="User.html" id="user">
+                            <div class="menu-item menu-itemuser">
+                                <img src="assets/Icons/user.png" alt="Home Icon">
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--==================== user ====================-->
+
+        <div class="user_main">
+            <div class="user_submain">
+                <div class="user_head">
+                    <img src="assets/Icons/Profile/home_user.png" class="icon_user-home" alt="">
+                    <p>PROFILE</p>
+                    <img src="assets/Icons/Profile/settings_user.png" class="icon_setting" id="icon_setting"  alt="">
+                
+                </div>
+
+                <div class="user_avatar" >
+                    <img src="assets/images/Avatar.png"  id="user_profile-picture" alt="">
+                </div>
+
+                <div class="user_details">
+                    <p class="user_details_name" id="user_profile-title-name">Username</p>
+                    <p class="user_details_email" id="user_details_email">Email</p>
+                    <p class="user_details_location" class="user_details_location">15/963 GambitTown, Hamberg Road,PistonRog District, roman, 10985</p>
+
+                </div>
+
+                <div class="user_mainicon">
+                    <div class="user_icon" id="user_icon_device">
+                        <p>Device</p>
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="user_icon">
+                        <p>Statistics</p>
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <div class="user_icon">
+                        <p>Manage</p>
+                        <i class="fa-solid fa-user-astronaut"></i>
+                    </div>
+                    <div class="user_icon">
+                        <p>Notification</p>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="user_icon ">
+                        <p>Help</p>
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div class="user_icon " >
+                        <a href="Login.html"  onclick="logout()">
+                            <p>Logout</p>
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="user_bg">
+                    <img  src="assets/images/Background.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="Alertmessage_main" id="Alertmessage_main">
+                <div class="Alertmessage" id="Alertmessage" style="display: none;">
+                    <p></p>
+                    <i class="fa-solid fa-xmark Alertmessage-icon" id="Alertmessage_close-icon" ></i>
+                </div>
+            </div>
+
+
+            <div class="user_menu" id="user_menu" style="display: none;">
+                <div class="user_submenu">
+    
+                    <div class="user_device">
+                        <div class="user_device_head">
+                            <p>Devices</p>
+                            <img class="close-button-device" id="close-button-device" src="assets/Icons/close.png" alt=""> 
+                        </div>
+                        <div class="user_device_boxtitle">
+                            <div class="user_device_title">
+                                <p>Weather</p>
+                            </div>
+                            <div class="user_device_title">
+                                <p>Control</p>
+                            </div>
+                            <div class="user_device_title">
+                                <p>Alert</p>
+                            </div>
+                            <div class="user_device_title">
+                                <p>External</p>
+                            </div>
+    
+                        </div>
+                        <div class="user_device_content">
+
+                                <div class="user_device_subcontent user_device_wind-speed ">
+                                    <div class="user_device_subcontent-text">
+                                        <p>RS-FS-N01</p>
+                                        <p>Wind Speed</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/wind_speed.png" alt="">
+                                </div>
+
+                                <div class="user_device_subcontent user_device_dht">
+                                    <div class="user_device_subcontent-text">
+                                        <p>DHT11</p>
+                                        <p>Temperature <br>& Humidity</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/dht.png" alt="">
+                                </div>
+                            
+                                <div class="user_device_subcontent user_device_rfid">
+                                    <div class="user_device_subcontent-text">
+                                        <p>RFID</p>
+                                        <p>Door</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/rfid.png" class="rfid" alt="">
+                                </div>
+
+                                <div class="user_device_subcontent user_device_led">
+                                    <div class="user_device_subcontent-text">
+                                        <p>LED</p>
+                                        <p>Light</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/led.png" alt="">
+                                </div>
+
+                                <div class="user_device_subcontent user_device_switch">
+                                    <div class="user_device_subcontent-text">
+                                        <p>TOGGLE SWITCH</p>
+                                        <p>Power</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/switch.png" alt="">
+                                </div>
+                                
+    
+                                <div class="user_device_subcontent user_device_ultrasonic">
+                                    <div class="user_device_subcontent-text">
+                                        <p>HC-SR04</p>
+                                        <p>Ultrasonic</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/ultrasonic.png" alt="">
+                                </div>
+
+                                <div class="user_device_subcontent user_device_water-level">
+                                    <div class="user_device_subcontent-text">
+                                        <p>WATER LEVEL</p>
+                                        <p>Water Level</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/water_level.png" alt="">
+                                </div>
+
+                                <div class="user_device_subcontent user_device_potentiometer">
+                                    <div class="user_device_subcontent-text">
+                                        <p>POTENTIOMETER</p>
+                                        <p>Pump</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/potentiometer.png" alt="">
+                                </div>
+
+                                
+                                <div class="user_device_subcontent user_device_meter">
+                                    <div class="user_device_subcontent-text">
+                                        <p>SDM120CT-MV</p>
+                                        <p>Energy Meter</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/sdm120ct.png" class="meter" alt="">
+                                </div>
+
+                                <div class="user_device_subcontent user_device_meter">
+                                    <div class="user_device_subcontent-text">
+                                        <p>YEELIGHT LED BULB 1S</p>
+                                        <p>Smart light</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/Yeelight.png" class="yeelight" alt="">
+                                </div>
+
+                                <div class="user_device_subcontent user_device_home_charger">
+                                    <div class="user_device_subcontent-text">
+                                        <p>MEA EV HOME CHARGER</p>
+                                        <p>EV Home Charger</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/home_charger.png" class="home_charger" alt="">
+                                </div>
+                  
+<!--
+                                <div class="user_device_subcontent user_device_Evlink">
+                                    <div class="user_device_subcontent-text">
+                                        <p>Schneider EVlink</p>
+                                        <p>EV Simulation tool</p>
+                                    </div>
+                                    <img src="assets/images/User/Devices/EV Simulation.png" class="Evlink" alt="">
+                                </div>
+
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="dialog_setting" id="dialog_setting" style="display: none;">
+            <div class="dialog_content">
+
+                <div class="dialog_subcontent">
+                    <p>Edit Widget Setting</p>
+                    <img class="close-button" id="close-button-setting" src="assets/Icons/close.png" alt=""> 
+                </div>
+
+                <div class="dialog_content-profile">
+
+                    <div class="user_avatar">
+                        <img src="assets/images/Avatar.png" id="user_avatar-imgcopy" alt="">
+                    </div>
+
+                    <form action="">
+                        <input type="text" class="dialog_content-input" name="" id="dialog_content-input" placeholder="Input Your Name">
+                    </form>
+
+                </div>
+                    
+                <div class="dialog_content-bottom">
+                    <label class="dialog_box_option"  for="imageUploadSetting" class="custom-file-upload">
+                        <div class="upload-icon"></div>
+                    </label>
+                    <input type="file" id="imageUploadSetting" name="imageUploadSetting" accept="images/*">
+                            
+                    <div class="dialog_submit" id="dialog_submit_setting">
+                        <input type="button" class="dialog_buttonsubmit" value="SUBMIT" onclick="">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        
+
+
+       
+</div>
+    
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Smarthome.js"></script>
+    <script src="User_Menu.js"></script>
+    <script type="module" src="User.js"></script>
+
+    
+
+</body>
+</html>

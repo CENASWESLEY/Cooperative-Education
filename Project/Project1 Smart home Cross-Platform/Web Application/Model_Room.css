@@ -1,0 +1,452 @@
+
+.layout{
+
+  display: grid;
+  grid-template-columns: 265px 1620px;
+  align-items: center;
+}
+
+
+/*==================== Living Room ====================*/
+
+.section_main-modelcenter{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+.room{
+  position: relative;
+  overflow: hidden;
+  width: 920px;
+  height: 290px;
+  background: var(--bg-submain-color-gray);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg_room {
+
+  
+  width: 100%;
+  height: 100%;
+}
+
+.bg_room img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 2rem;
+  
+}
+
+.bg_room::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0) 30%);
+}
+
+.bg_details {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--overlay-gradient);
+  border-radius: 0 0 2rem 2rem;
+}
+
+.bg_details p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 5px 10px rgb(0, 0, 0)
+  ;
+}
+
+.setting_room {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.setting_room img {
+  
+  width: 2rem;
+  height: 2rem;
+}
+
+.favourite_device,.alert_device{
+
+  cursor: pointer;
+}
+
+
+.dialog_favourite{
+
+  display: none;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 0 30px var(--bg-submain-color-gray);
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  margin-left: 30rem ;
+  
+}
+
+.dialog_favourite-content_edit{
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 700px;
+  background-color: var(--bg-submain-color-gray);
+  border-radius: 3rem;
+  margin: 8rem 0 0 3rem;
+  z-index: 1;
+  overflow-y: auto;
+
+}
+.dialog_favourite-title_edit p{
+  font-size: 1.5rem;
+  color: var(--text-white);
+  text-align: center;
+  font-weight: 600;
+  margin: 3rem 0;
+}
+
+.dialog_favourite-content{
+
+
+  position: absolute;
+  top: 0;
+  width: 1100px;
+  height: 700px;
+  background-color: var(--bg-submain-color-gray);
+  box-shadow: 0 0 30px var(--bg-submain-color-black);
+  border-radius: 3rem;
+  margin: 8rem 0 0 25rem;
+  z-index: 2;
+  overflow-y: auto;
+
+}
+
+.dialog_favourite_maincard{
+
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  height: 550px;
+  padding: 1rem;
+  overflow-y: auto;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.favorite_card-center-yeelight{
+
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  width: fit-content;
+  height: fit-content;
+
+}
+.favorite_card-center-yeelight img{
+
+  width: 60px;
+  height: 100px;
+
+}
+.close-button{
+  color: #aaa;
+  float: right;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dialog_favourite-title{
+  
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  margin: 3rem auto;
+}
+
+.dialog_favourite-title p:nth-child(1){
+
+  font-size: 1.5rem;
+color: var(--text-white);
+text-align: center;
+font-weight: 600;
+
+}
+
+.dialog_favourite-content_add{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 700px;
+  background: var(--bg-submain-color-gray);
+  border-radius: 3rem;
+  margin: 8rem 3rem 0 0;
+  z-index: 1;
+  overflow-y: auto;
+
+}
+
+.dialog_favourite-title_add{
+
+
+  position: fixed;
+  background: var(--bg-submain-color-gray);
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 320px;
+  z-index: 1;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 30px 30px var(--bg-submain-color-gray);
+}
+
+
+.dialog_favourite-title_add p{
+
+  position: fixed;
+  font-size: 1.5rem;
+  color: var(--text-white);
+  text-align: center;
+  font-weight: 600;
+  margin: 3rem 0 1rem 0;
+
+  
+}
+
+.favourite_maincard-AddDevice{
+  
+  margin-top: 7rem;
+  display: grid;
+  grid-column: auto;
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  height:1000px;
+  overflow-y: auto;
+
+  
+}
+
+
+.favourite_card-door_adddevice:hover,.favourite_card-light_adddevice:hover
+,.favourite_card-power_adddevice:hover,.favourite_card-yeelight_adddevice:hover{
+
+  cursor: pointer;
+}
+
+.dialog_buttondelete{
+  cursor: pointer;
+
+}
+
+
+
+
+.dialog_alert{
+
+  display: none;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 0 30px var(--bg-submain-color-gray);
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  margin-left: 30rem ;
+  
+}
+
+.dialog_alert-content_edit{
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 700px;
+  background-color: var(--bg-submain-color-gray);
+  border-radius: 3rem;
+  margin: 8rem 0 0 3rem;
+  z-index: 1;
+  overflow-y: auto;
+
+}
+.dialog_alert-title_edit p{
+  font-size: 1.5rem;
+  color: var(--text-white);
+  text-align: center;
+  font-weight: 600;
+  margin: 3rem 0;
+}
+
+.dialog_alert-content{
+
+
+  position: absolute;
+  top: 0;
+  width: 1100px;
+  height: 700px;
+  background-color: var(--bg-submain-color-gray);
+  box-shadow: 0 0 30px var(--bg-submain-color-black);
+  border-radius: 3rem;
+  margin: 8rem 0 0 25rem;
+  z-index: 2;
+  overflow-y: auto;
+
+}
+
+.dialog_alert_maincard{
+
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  height: 550px;
+  padding: 1rem;
+  overflow-y: auto;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.alert_maincard_add{
+  
+  margin-top: 7rem;
+  display: grid;
+  grid-column: auto;
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  height:1000px;
+  overflow-y: auto;
+}
+
+.alert_card{
+  box-shadow: 0 0 30px var(--bg-submain-color-black);
+}
+
+.alert_card_add{
+
+  cursor: pointer;
+}
+
+.close-button{
+  color: #aaa;
+  float: right;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dialog_alert-title{
+  
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  margin: 3rem auto;
+}
+
+.dialog_alert-title p:nth-child(1){
+
+  font-size: 1.5rem;
+color: var(--text-white);
+text-align: center;
+font-weight: 600;
+
+}
+
+.dialog_alert-content_add{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 700px;
+  background: var(--bg-submain-color-gray);
+  border-radius: 3rem;
+  margin: 8rem 3rem 0 0;
+  z-index: 1;
+  overflow-y: auto;
+
+}
+
+.dialog_alert-title_add{
+
+
+  position: fixed;
+  background: var(--bg-submain-color-gray);
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 320px;
+  z-index: 1;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 30px 30px var(--bg-submain-color-gray);
+}
+
+
+.dialog_alert-title_add p{
+
+  position: fixed;
+  font-size: 1.5rem;
+  color: var(--text-white);
+  text-align: center;
+  font-weight: 600;
+  margin: 3rem 0 1rem 0;
+
+  
+}
+
+.alert_maincard-AddDevice{
+  
+  margin-top: 6rem;
+  display: grid;
+  grid-column: auto;
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  height:800px;
+  overflow-y: auto;
+
+  
+}
+
+
+.alert_card-door_adddevice:hover,.alert_card-light_adddevice:hover
+,.alert_card-power_adddevice:hover,.alert_card-yeelight_adddevice:hover{
+
+  cursor: pointer;
+}
+
+.dialog_buttondelete{
+  cursor: pointer;
+
+}
